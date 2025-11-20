@@ -5,14 +5,30 @@ import { useEffect } from 'react'
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     // Matomo/Prospectory Tracking Code
-    (function() {
-      var script = document.createElement('script');
-      script.src = 'https://app-test.prospectory.ai/psp.tracker.test.js';
-      script.setAttribute('pspClientId', 'cmea35np6000wof25h9t8cxom');
-      script.setAttribute('pspUserId', 'cm67xbmvk00axahpvpjn4vumm');
-      script.async = true;
-      document.head.appendChild(script);
-    })();
+    (function(w, d) {
+      try {
+        if (w._psp) return;
+        var q = function() {
+          q.q = q.q || [];
+          q.q.push(arguments);
+        };
+        q.q = [];
+        w._psp = q;
+        var s = d.createElement("script");
+        s.async = 1;
+        s.src = "https://app-dev.prospectory.ai/psp.tracker.dev.js";
+        var f = d.getElementsByTagName("script")[0];
+        f.parentNode.insertBefore(s, f);
+        s.onload = function() {
+          try {
+            (w.tracking && w.tracking.load) && w.tracking.load({
+              pspClientId: "cmdymbogv000sna24m9ucukp4",
+              pspuserId: "cm470av0g0000cyvsydoy9jrd"
+            });
+          } catch (e) {}
+        };
+      } catch (e) {}
+    })(window, document);
   }, [])
 
   return (
