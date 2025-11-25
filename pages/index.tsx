@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Domain Automation Dashboard</title>
+        <title>Client Site Tracker Test</title>
       </Head>
       
       <div style={{
@@ -33,7 +33,7 @@ export default function Home() {
             WebkitTextFillColor: 'transparent',
             marginBottom: '2rem'
           }}>
-            🚀 Domain Automation Dashboard
+            🚀 Client Site Tracker Test
           </h1>
 
           <div style={{
@@ -64,9 +64,9 @@ export default function Home() {
               📊 Tracking Information
             </h3>
             <ul style={{ color: '#004085', lineHeight: '1.8' }}>
-              <li><strong>Tracking Script:</strong> https://app-test.prospectory.ai/psp.tracker.test.js</li>
-              <li><strong>Client ID:</strong> cmea35np6000wof25h9t8cxom</li>
-              <li><strong>User ID:</strong> cm67xbmvk00axahpvpjn4vumm</li>
+              <li><strong>Tracking Script:</strong> https://app-dev.prospectory.ai/psp.tracker.dev.js</li>
+              <li><strong>Client ID:</strong> cmdymbp3q001cna243vesyx4r</li>
+              <li><strong>User ID:</strong> cm6rgwls50000jb2lypjf341q</li>
             </ul>
           </div>
 
@@ -83,7 +83,7 @@ export default function Home() {
             <ol style={{ color: '#856404', lineHeight: '1.8' }}>
               <li>Open browser Developer Tools (F12)</li>
               <li>Go to the Network tab</li>
-              <li>Look for requests to <code>psp.tracker.test.js</code></li>
+              <li>Look for requests to <code>psp.tracker.dev.js</code></li>
               <li>Check your Matomo dashboard for page views</li>
             </ol>
           </div>
